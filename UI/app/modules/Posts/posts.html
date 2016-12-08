@@ -1,0 +1,64 @@
+﻿<div ng-controller="postController">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-lg-2 class="label-info"" >
+               <label class="">Post Title</label> : 
+            </div>
+            <div class="col-lg-10">
+                 <input class="text-nowrap col-lg-10" type="text" id="titleId" placeholder="Title" ng-model="Post.PostTitle"/>                             
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="col-lg-12">
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-lg-2 class=" label-info"">
+                <label class="">Category</label> :
+            </div>
+            <div class="col-lg-10">
+                
+                <select class="col-lg-10 dropdown-toggle"> <!--ng-options="c for c in categories"-->
+                    <option class="">C#</option>
+                    <option>Design patterns</option>
+                    <option>General programming</option>
+                    <option>AngularJS</option>
+                    <option>HTML5 and CSS3</option>
+                    <option>Algorithms</option>
+                    <option>Data Structures</option>
+                </select>
+                <button class="btn-link" id="createCategory" ng-click="">Create</button>
+            </div>
+         
+        </div>
+    </div>
+    <div class="row">
+        <br />
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div text-angular="text-angular" name="htmlcontent" ng-model="Post.PostContent" ta-disabled='disabled'></div>
+        </div>
+    </div>
+    <div class="row">
+        <br />
+    </div>
+    <div class="row">
+
+        <div class="col-lg-12">
+            <button class="btn-primary" id="AddPost" ng-click="AddPost();">Post</button>
+        </div>
+    </div>
+    <div class="row">
+        <br />
+    </div>
+    <div class="row">
+
+        <div class="col-lg-12">
+           <label class="alert-info">{{status}}</label>
+        </div>
+    </div>
+</div>

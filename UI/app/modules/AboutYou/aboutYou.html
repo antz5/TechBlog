@@ -1,0 +1,136 @@
+﻿<div class="container" ng-controller="profileController" >
+    <div class="row">
+        <div class="col-sm-12 blog-main" style="height:800px">
+            <div class="row"><br /></div>
+            <div class="row"><br /></div>
+            <div class="row"><br /></div>
+                <div class="row">
+                    <div class="col-lg-2"><label>First Name</label></div>
+                    <div class="col-lg-1">:</div>
+                    <div class="col-lg-6"><input type="text" class="col-lg-6" placeholder="First Name" ng-model="Profile.firstName" /></div>
+                    <div class="col-lg-3"></div>
+                </div>
+
+            <div class="row"><br /></div>
+
+            <div class="row">
+                <div class="col-lg-2"><label>Last Name</label></div>
+                <div class="col-lg-1">:</div>
+                <div class="col-lg-6"><input type="text" class="col-lg-6" placeholder="Last Name" ng-model="Profile.lastName" /></div>
+                <div class="col-lg-3"></div>
+            </div>
+
+            <div class="row"><br /></div>
+
+            <div class="row">
+                <div class="col-lg-2"><label>Gender</label></div>
+                <div class="col-lg-1">:</div>
+                <div class="col-lg-6">
+                    <select ng-model="Profile.sex" class="col-lg-6">
+                        <option selected="selected">Male</option>
+                        <option>Female</option>
+                    </select>
+
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+
+            <div class="row"><br /></div>
+
+            <div class="row">
+                <div class="col-lg-2"><label>Date Of Birth</label></div>
+                <div class="col-lg-1">:</div>
+                <div class="col-lg-6">
+                    <input class="col-lg-6" ng-model="Profile.DOB" type="date"/>                    
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+
+            <div class="row"><br /></div>
+
+
+            <div class="row">
+                <div class="col-lg-2"><label>Mobile</label></div>
+                <div class="col-lg-1">:</div>
+                <div class="col-lg-6"><input type="number" class="col-lg-6" placeholder="Mobile" ng-model="Profile.mobile" /></div>
+                <div class="col-lg-3"></div>
+            </div>
+
+            <div class="row"><br /></div>
+
+            <div class="row">
+                <div class="col-lg-2"><label>Organisation</label></div>
+                <div class="col-lg-1">:</div>
+                <div class="col-lg-6"><input type="text" class="col-lg-6" placeholder="Organisation" ng-model="Profile.organization" /></div>
+                <div class="col-lg-3"></div>
+            </div>
+
+            <div class="row"><br /></div>
+
+            <div class="row">
+                <div class="col-lg-2"><label>City</label></div>
+                <div class="col-lg-1">:</div>
+                <div class="col-lg-6"><input type="text" class="col-lg-6" placeholder="City" ng-model="Profile.city" /></div>
+                <div class="col-lg-3"></div>
+            </div>
+
+            <div class="row"><br /></div>
+
+            <div class="row">
+                <div class="col-lg-2"><label>Country</label></div>
+                <div class="col-lg-1">:</div>
+                <div class="col-lg-6"><input type="text" class="col-lg-6" placeholder="Country" ng-model="Profile.country" /></div>
+                <div class="col-lg-3"></div>
+            </div>
+
+            <div class="row"><br /></div>
+
+            <div class="row">
+                <div class="col-lg-2"><label>About You</label></div>
+                <div class="col-lg-1">:</div>
+                <div class="col-lg-6">
+                    <textarea class="col-lg-6" placeholder="Something About You" ng-model="Profile.aboutMe"></textarea>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+
+            <div class="row"><br /></div>
+
+            <div class="row">
+                <div class="col-lg-2"><label>Website</label></div>
+                <div class="col-lg-1">:</div>
+                <div class="col-lg-6"><input type="text" class="col-lg-6" placeholder="Website" ng-model="Profile.website" /></div>
+                <div class="col-lg-3"></div>
+            </div>
+
+
+            <div class="row"><br /></div>
+
+            <div class="row">
+                <div class="col-lg-2"><label>Your Picture</label></div>
+                <div class="col-lg-1">:</div>
+                <div class="col-lg-9">
+                    <!--<input type="file" id="file1" name="file" ng-files="getTheFiles($files)" />-->
+                    <input type="file" ngf-select ng-model="picFile" name="file1"
+                           accept="image/*" ngf-max-size="10MB"
+                           ngf-model-invalid="errorFile">
+                    <div style="height:70px; width:70px">
+                        <img ng-show="myForm.file.$valid" ngf-thumbnail="picFile" style="height:100%;width:100%">
+                    </div>                                                        
+            </div>
+           
+            <div class="row"><br /></div>
+            <div class="row"><br /></div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-9"><button class="col-lg-2 btn-primary" ng-click="uploadFiles(picFile)">Submit</button></div>
+            </div>
+            <div class="row">
+                <h3>{{statusProfile}}</h3>
+            </div>
+
+           </div>
+    </div>
+</div>
+</div>

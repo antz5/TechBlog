@@ -1,0 +1,24 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2 col-sm-2 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="list-group-item table-hover"><a href="#/Dashboard">Dashboard <span class="sr-only">(current)</span></a></li>
+                <li class="list-group-item"><a ui-sref="Dashboard.Posts">Posts</a></li>
+                <li class="list-group-item"><a ui-sref="Dashboard.Categories">Categories</a></li>
+                <li class="list-group-item"><a href="#">Comments</a></li>
+                <li class="list-group-item"><a ui-sref="Dashboard.AboutYou">About You Page</a></li>
+                <li class="list-group-item"><a href="#">Themes</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-9  col-sm-9 col-md-10 main" id="dashboard">
+            <br />
+            <div class="main" style="height:800px">
+                <ui-view></ui-view>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+

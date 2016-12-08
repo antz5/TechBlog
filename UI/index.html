@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html ng-app="TechBlog">
+<head>
+    <title>TechBlog</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Ananth" />
+    <link rel="icon" href="../icons/favicon.ico" />    
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/ie10-viewport-bug-workaround.css" rel="stylesheet" />
+    <link href="Content/techblog.css" rel="stylesheet" />   
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300">
+    <link rel="stylesheet" href="http://textangular.com/dist/textAngular.css" type="text/css">
+    <script src="app/Common.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-ui-router.min.js"></script>
+    <script src="Scripts/ng-file-upload-shim.min.js"></script>
+    <script src="Scripts/ng-file-upload.min.js"></script>
+    <script src="app/modules/app.js"></script>
+   
+    <script src='http://textangular.com/dist/textAngular-rangy.min.js'></script>
+    <script src='http://textangular.com/dist/textAngular-sanitize.min.js'></script>
+    <script src='http://textangular.com/dist/textAngular.min.js'></script>
+    <script src="app/modules/Dashboard/DashboardController.js"></script>
+    <script src="app/modules/Posts/postController.js"></script>
+    <script src="app/modules/Public/publicController.js"></script>
+    <script src="app/modules/AboutYou/aboutYouController.js"></script>
+    <script src="app/modules/Categories/categoriesController.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
+
+    
+</head>
+<body>
+    <div class="blog-masthead">
+        <div class="container">  
+            <div class="col-lg-9"></div> 
+            <div class="col-lg-3">
+                <nav class="blog-nav">
+                    <a class="blog-nav-item active" ui-sref="Public">Home</a>
+                    <a class="blog-nav-item" ui-sref="Dashboard">Start a Blog</a>
+                    <!--<a class="blog-nav-item" href="#/Login">Login/Register</a>-->
+                </nav>
+            </div>        
+                <div class="blog-header">
+                    <h1 class="blog-title">TechBlog</h1>
+                    <p class="blog-header">Human knowledge belongs to the world!</p>
+                </div>            
+                       <div class="header-container">
+                <div class="header-img">
+                    <img class="img-circle" src="images/back.jpg" />                   
+                </div>
+           </div>
+            
+        </div>
+    </div>
+    <div class="row">
+       
+        <div class="col-lg-12">
+            <ui-view></ui-view>
+        </div>
+    </div>   
+</body>
+</html>

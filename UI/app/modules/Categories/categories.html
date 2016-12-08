@@ -1,0 +1,69 @@
+﻿<div class="container" ng-controller="categoriesController" ng-init="GetCategories('bhavs@gmail.com')">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="row"><br /></div>
+            <div class="row">
+                <div class="col-lg-3"><label>Title</label></div>
+                <div class="col-lg-1">:</div>
+                <div class="col-lg-8"><input type="text" class="col-lg-8" ng-click="clearStatus()" placeholder="Category Title" ng-model="Categories.categoryName" /></div>
+                
+            </div>
+
+            <div class="row"><br /></div>
+
+            <div class="row">
+                <div class="col-lg-3"><label>Description</label></div>
+                <div class="col-lg-1">:</div>
+                <div class="col-lg-8">
+                    <textarea class="col-lg-8" placeholder="Category Description" ng-click="clearStatus()" ng-model="Categories.categoryDescription"></textarea>
+                </div>
+                
+            </div>
+
+            <div class="row"><br /></div>
+
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-8">
+                    <button class="col-lg-3 btn-primary" ng-click="AddAndRetrieveCategories()">Submit</button>
+                </div>
+              
+            </div>
+
+            <div class="row"><br /></div>
+            <div class="row">
+                <h3>{{statusCategories}}</h3>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tr ng-repeat="c in pagingData | startFrom:currentPage*pageSize | limitTo:pageSize">
+                    <td>
+                        <input type="checkbox" value="" />
+                    </td>
+                    <td>{{c.categoryName}}</td>
+                    <td>{{c.categoryDescription}}</td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <td class="pager" colspan="3">                          
+                            <button ng-disabled="currentPage === 0" ng-click="currentPage=currentPage-1"><</button>
+                                {{currentPage+1}}/{{numberOfPages()}}                            
+                            <button ng-disabled="(currentPage >= pagingData.length/pageSize - 1)" ng-click="currentPage=currentPage+1">></button>                            
+                        </td>
+                    </tr>
+                </tfoot>               
+            </table>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,65 @@
+﻿<div class="container">   
+    
+    <div class="row" ng-controller="viewpostController">
+        <div class="col-sm-8 blog-main"  ng-init="GetPosts('bhavs@gmail.com')">
+            <div class="blog-post" ng-repeat="p in pagingData | startFrom:currentPage*pageSize | limitTo:pageSize">
+                <h2 class="blog-post-title">{{p.PostTitle}}</h2>
+                <p class="blog-post-meta">{{p.PostedDate}} <a href="#">{{p.PostedBy}}</a></p>               
+                <hr>
+                <p ng-bind-html="p.PostContent"></p>
+            </div>
+            <nav>
+                <ul class="pager">
+                    <li>
+                    <button ng-disabled="currentPage === 0" ng-click="currentPage=currentPage-1">Previous</button>
+                    </li>
+                    {{currentPage+1}}/{{numberOfPages()}}
+                    <li>
+                    <button ng-disabled="(currentPage >= pagingData.length/pageSize - 1)" ng-click="currentPage=currentPage+1">Next</button>
+                    </li>
+                </ul>
+            </nav>
+                    
+            
+        </div>
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+            <div class="sidebar-module sidebar-module-inset">
+                <div class="profile-header-container">
+                    <div class="profile-header-img">
+                        <img class="img-circle" ng-src="{{ProfileImageUrl}}"/>
+                    </div>
+                </div>
+                <h4>About Me</h4>
+                <p>I am, {{ProfileData.FirstName}} {{ProfileData.LastName}}.</p>
+                <p>{{ProfileData.AboutMe}}</p>
+                <p>{{ProfileData.City}}, {{ProfileData.Country}} </p>          
+               
+            </div>
+            <div class="sidebar-module">
+                <h4>Archives</h4>
+                <ol class="list-unstyled">
+                    <li><a href="#">March 2014</a></li>
+                    <li><a href="#">February 2014</a></li>
+                    <li><a href="#">January 2014</a></li>
+                    <li><a href="#">December 2013</a></li>
+                    <li><a href="#">November 2013</a></li>
+                    <li><a href="#">October 2013</a></li>
+                    <li><a href="#">September 2013</a></li>
+                    <li><a href="#">August 2013</a></li>
+                    <li><a href="#">July 2013</a></li>
+                    <li><a href="#">June 2013</a></li>
+                    <li><a href="#">May 2013</a></li>
+                    <li><a href="#">April 2013</a></li>
+                </ol>
+            </div>
+            <div class="sidebar-module">
+                <h4>Elsewhere</h4>
+                <ol class="list-unstyled">
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
