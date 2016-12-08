@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechBlogWebAPI", "TechBlogWebAPI\TechBlogWebAPI.csproj", "{3CC0A544-9852-43F6-8AFB-53E4D452D241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechBlogWebAPI.Tests", "TechBlogWebAPI.Tests\TechBlogWebAPI.Tests.csproj", "{1C2E8926-8111-4F38-80CE-9FA94872D6CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CC0A544-9852-43F6-8AFB-53E4D452D241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CC0A544-9852-43F6-8AFB-53E4D452D241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CC0A544-9852-43F6-8AFB-53E4D452D241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CC0A544-9852-43F6-8AFB-53E4D452D241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C2E8926-8111-4F38-80CE-9FA94872D6CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C2E8926-8111-4F38-80CE-9FA94872D6CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C2E8926-8111-4F38-80CE-9FA94872D6CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C2E8926-8111-4F38-80CE-9FA94872D6CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
